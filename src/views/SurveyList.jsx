@@ -1,7 +1,19 @@
-const SurveyList = () => (
+// Import libraries
+import { connect } from 'react-redux';
+
+const SurveyList = ({ title }) => (
   <section>
-    <h1>Surveys</h1>
+    <h1>{title}</h1>
   </section>
 );
 
-export default SurveyList;
+// Map dispatch
+const mapDispatchToProps = dispatch => ({
+});
+
+// Map state
+const mapStateToProps = state => ({
+  title: state.surveyReducer.title,
+});
+  
+export default connect(mapStateToProps, mapDispatchToProps)(SurveyList);
