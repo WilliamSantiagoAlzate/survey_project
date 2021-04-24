@@ -1,5 +1,4 @@
 export const initialState = {
-  title: 'Surveys',
   surveys: [
     {
       id: 1,
