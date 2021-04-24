@@ -1,7 +1,5 @@
 //Initialize state
-const initialState = {
-  title: 'Survey'
-};
+import { initialState } from '../initialState';
 
 //Create reducers
 const surveyReducer = (state = initialState, action) => {
