@@ -6,9 +6,9 @@ const SurveyCard = ({ survey }) => (
     <section className="card-header">
       <div className="d-flex justify-content-between align-items-center">
         <h5>{survey.title}</h5>
-        <span className="text-danger cursor-pointer">
+        <button type="button" className="btn btn-danger py-1 px-2">
           <i className="fas fa-trash"></i>
-        </span>
+        </button>
       </div>
       <span className="badge rounded-pill bg-success me-2">
         {`${survey.questions.length} Questions`}
@@ -21,8 +21,16 @@ const SurveyCard = ({ survey }) => (
     </section>
     <section className="card-body">
       <p className="card-text">{survey.description}</p>
-      <Link className="btn btn-primary me-2" to="/">Update</Link>
-      <Link className="btn btn-primary" to="/">Answer survey</Link>
+      <Link to="/">
+        <button type="button" className="btn btn-primary me-2">
+          Update
+        </button>
+      </Link>
+      <Link to="/">
+        <button type="button" className="btn btn-primary me-2">
+          Answer survey
+        </button>
+      </Link>
     </section>
   </article>
 );

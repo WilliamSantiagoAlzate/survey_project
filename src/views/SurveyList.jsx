@@ -16,13 +16,9 @@ const SurveyList = ({ surveys }) => (
   </section>
 );
 
-// Map dispatch
-const mapDispatchToProps = dispatch => ({
-});
-
 // Map state
 const mapStateToProps = state => ({
   surveys: state.surveyReducer.surveys
 });
   
-export default connect(mapStateToProps, mapDispatchToProps)(SurveyList);
+export default connect(mapStateToProps, null)(SurveyList);

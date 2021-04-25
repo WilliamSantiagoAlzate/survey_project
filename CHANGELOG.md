@@ -29,3 +29,12 @@ This is the first version of the project, it include all basic configuration of 
   Add Redux and its configuration.
 - [REACT-SURVEY](https://github.com/WilliamSantiagoAlzate/survey_project/issues/13)
   Add changelog file.
+
+## [2.0] - 2021-04-25
+
+This version include the new create survey feature, with this you can create a new survey and add any questions you want.
+
+### Added
+
+- [REACT-SURVEY](https://github.com/WilliamSantiagoAlzate/survey_project/issues/6)
+  Add create survey form.

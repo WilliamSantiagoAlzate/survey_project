@@ -9,16 +9,21 @@ export const generateSurveyId = () => {
     return initialState.surveys[lastIndex].id + 1;
   }
 }
-export const generateQuestionId = (survey) => {
-  const lastIndex = survey.questions.length - 1;
-  return survey.questions[lastIndex].id + 1;
-}
-export const generateSelectAnswerId = (surveyId, questionId) => {
 
+export const generateQuestionId = (questions) => {
+  const lastIndex = questions.length - 1;
+  return questions[lastIndex].id + 1;
 }
+
+export const generateSelectAnswerId = (selectAnswer) => {
+  const lastIndex = selectAnswer.length - 1;
+  return selectAnswer[lastIndex].id + 1;
+}
+
 export const generateAnswerId = (surveyId) => {
 
 }
+
 export const generateAnswerConsolidatedId = (surveyId, answerId) => {
 
 }

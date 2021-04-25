@@ -1,8 +1,11 @@
 // Import libraries
+import { useState } from 'react'
 import { connect } from 'react-redux';
-import { Formik, Field, Form, FieldArray } from 'formik';
+import { Formik } from 'formik';
 // Import utils
-import { generateSurveyId, generateQuestionId } from '../utils/idGenerator';
+import { generateSurveyId } from '../utils/idGenerator';
+// Import components
+import SurveyForm from '../components/SurveyForm';
 // Import actions
 import { createSurvey } from '../redux/actions/surveyActions';
 
@@ -10,97 +13,45 @@ const initialValues = {
   id: generateSurveyId(),
   title: '',
   description: '',
-  questions: [{ id: 1, description: '' }],
+  questions: [{ 
+    id: 1, 
+    description: '',
+    answerType: '',
+    selectAnswer: [{
+      id: 1,
+      description: '',
+    }] 
+  }],
   answers: []
 }
 
-const CreateSurvey = ({ createSurvey, answerTypes }) => {
+const CreateSurvey = ({ createSurvey }) => {
+  // State
+  const [showAlert, setShowAlert] = useState(false);
   // Submit data
-  const submit = (values) => {
+  const submit = (values, actions) => {
     console.log(values);
+    createSurvey(values);
+    actions.resetForm();
+    setShowAlert(true);
+    setTimeout(() => setShowAlert(false), 2000);
   };
 
   return (
     <section className="row mb-4">
       <h1 className="text-center mt-3 col-12">Create survey</h1>
+      {showAlert &&
+        <article className="alert alert-success w-50 mx-auto" role="alert">
+          <p className="mb-0">Survey created successfully!</p>
+        </article>
+      }
       <Formik
         initialValues={initialValues}
         onSubmit={submit}
+        rese
       >
         {({ values, handleChange }) => (
-          <Form className="col-md-6 offset-md-3">
-
-            <label htmlFor="title" className="form-label">Title</label>
-            <Field
-              id="title"
-              name="title"
-              type="text"
-              className="form-control mb-3"
-              onChange={handleChange}
-              value={values.title}
-            />
-
-            <label htmlFor="description" className="form-label">Description</label>
-            <Field
-              id="description"
-              name="description"
-              as="textarea"
-              className="form-control mb-3"
-              onChange={handleChange}
-              value={values.description}
-            />
-
-            <FieldArray name="questions">
-              {({ remove, push }) => (
-                <>
-                  <h5 className="text-center">Questions</h5>
-                  {values.questions.map((question, index) => (
-                    <section className="row" key={index}>
-                      <div className="col-md-10">
-
-                        <label htmlFor={`questions.${index}.description`} className="form-label">Description</label>
-                        <Field
-                          id={`questions.${index}.description`}
-                          name={`questions.${index}.description`}
-                          as="textarea"
-                          className="form-control mb-3"
-                          onChange={handleChange}
-                          value={question.description}
-                        />
-
-                      </div>
-                      <div className="col-md-2 d-flex justify-content-center align-items-center">
-                        {index > 0 &&
-                          <button 
-                            className="btn btn-danger"
-                            onClick={() => remove(index)}
-                            type="button"
-                          >
-                            <i className="fas fa-trash"></i>
-                          </button>
-                        }
-                      </div>
-                    </section>
-                  ))}
-                  <section className="d-flex justify-content-center">
-                    <button 
-                      className="btn btn-success"
-                      onClick={() => push({
-                        id: generateQuestionId(values), 
-                        description: '' 
-                      })}
-                      type="button"
-                    >
-                      <i className="fas fa-plus-circle"></i>
-                    </button>
-                  </section>
-                </>
-              )}
-            </FieldArray>
-
-            <button type="submit" className="btn btn-primary">Submit</button>
-
-          </Form>
+          <SurveyForm values={values} handleChange={handleChange} />
         )}
       </Formik>
     </section>
@@ -113,10 +64,5 @@ const mapDispatchToProps = dispatch => ({
     dispatch(createSurvey({ surveyData }))
   },
 });
-
-// Map state
-const mapStateToProps = state => ({
-  answerTypes: state.surveyReducer.answerTypes
-});
   
-export default connect(mapStateToProps, mapDispatchToProps)(CreateSurvey);
+export default connect(null, mapDispatchToProps)(CreateSurvey);
