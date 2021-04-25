@@ -30,7 +30,7 @@ This is the first version of the project, it include all basic configuration of 
 - [REACT-SURVEY](https://github.com/WilliamSantiagoAlzate/survey_project/issues/13)
   Add changelog file.
 
-## [2.0] - 2021-04-25
+## [2.0] - 2021-04-25 17:00
 
 This version include the new create survey feature, with this you can create a new survey and add any questions you want.
 
@@ -38,3 +38,12 @@ This version include the new create survey feature, with this you can create a n
 
 - [REACT-SURVEY](https://github.com/WilliamSantiagoAlzate/survey_project/issues/6)
   Add create survey form.
+
+## [3.0] - 2021-04-25 18:00
+
+This version include the new update survey feature, with this you can update a survey and change, remove and add any questions you want.
+
+### Added
+
+- [REACT-SURVEY](https://github.com/WilliamSantiagoAlzate/survey_project/issues/7)
+  Add update survey form.

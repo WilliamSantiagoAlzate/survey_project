@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 // Import views
 import SurveyList from './views/SurveyList';
 import CreateSurvey from './views/CreateSurvey';
+import UpdateSurvey from './views/UpdateSurvey';
 // Import components
 import Header from './components/Header';
 // Import style
@@ -17,6 +18,7 @@ const App = () => {
             <Switch>
               <Route exact path="/" component={SurveyList}/>
               <Route exact path="/create" component={CreateSurvey}/>
+              <Route exact path="/update/:id" component={UpdateSurvey}/>
             </Switch>
         </main>
       </BrowserRouter>

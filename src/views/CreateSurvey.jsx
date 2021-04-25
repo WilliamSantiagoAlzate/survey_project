@@ -9,25 +9,25 @@ import SurveyForm from '../components/SurveyForm';
 // Import actions
 import { createSurvey } from '../redux/actions/surveyActions';
 
-const initialValues = {
-  id: generateSurveyId(),
-  title: '',
-  description: '',
-  questions: [{ 
-    id: 1, 
-    description: '',
-    answerType: '',
-    selectAnswer: [{
-      id: 1,
-      description: '',
-    }] 
-  }],
-  answers: []
-}
-
 const CreateSurvey = ({ createSurvey }) => {
   // State
   const [showAlert, setShowAlert] = useState(false);
+  const [initialValues] = useState({
+    id: generateSurveyId(),
+    title: '',
+    description: '',
+    questions: [{ 
+      id: 1, 
+      description: '',
+      answerType: '',
+      selectAnswer: [{
+        id: 1,
+        description: '',
+      }] 
+    }],
+    answers: []
+  });
+  
   // Submit data
   const submit = (values, actions) => {
     console.log(values);

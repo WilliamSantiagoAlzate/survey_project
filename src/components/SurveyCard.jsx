@@ -21,7 +21,7 @@ const SurveyCard = ({ survey }) => (
     </section>
     <section className="card-body">
       <p className="card-text">{survey.description}</p>
-      <Link to="/">
+      <Link to={`/update/${survey.id}`}>
         <button type="button" className="btn btn-primary me-2">
           Update
         </button>
