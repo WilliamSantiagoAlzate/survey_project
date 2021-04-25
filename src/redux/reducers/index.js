@@ -1,10 +1,10 @@
-//Import libraries
+// Import libraries
 import { combineReducers } from 'redux';
 
-//Import reducers
+// Import reducers
 import surveyReducer from './surveyReducer';
 
-//Add reducers to root
+// Add reducers to root
 const rootReducer = combineReducers({
 	surveyReducer
 });

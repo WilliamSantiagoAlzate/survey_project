@@ -1,6 +1,7 @@
-// Actions
+// Import consts
+import { CREATE_SURVEY } from '../consts';
 
-// export const action = payload => ({
-//   type: CONSTANT,
-//   payload
-// });
+export const createSurvey = payload => ({
+  type: CREATE_SURVEY,
+  payload
+});

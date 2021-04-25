@@ -2,6 +2,7 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 // Import views
 import SurveyList from './views/SurveyList';
+import CreateSurvey from './views/CreateSurvey';
 // Import components
 import Header from './components/Header';
 // Import style
@@ -15,6 +16,7 @@ const App = () => {
         <main className="container">
             <Switch>
               <Route exact path="/" component={SurveyList}/>
+              <Route exact path="/create" component={CreateSurvey}/>
             </Switch>
         </main>
       </BrowserRouter>

@@ -1,9 +1,9 @@
-//Import libraries
+// Import libraries
 import { createStore } from 'redux';
-//Import reducers
+// Import reducers
 import rootReducer from '../reducers';
 
-//Create store
+// Create store
 const storeFn = () => {
   return { ...createStore(rootReducer) }
 };

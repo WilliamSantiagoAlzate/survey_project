@@ -1,3 +1,3 @@
 // Consts
 
-// export const CONSTANT = 'CONSTANT';
+export const CREATE_SURVEY = 'CREATE_SURVEY';
