@@ -47,3 +47,12 @@ This version include the new update survey feature, with this you can update a s
 
 - [REACT-SURVEY](https://github.com/WilliamSantiagoAlzate/survey_project/issues/7)
   Add update survey form.
+
+## [4.0] - 2021-04-25 18:40
+
+This version include the new delete survey feature, with this you can delete any survey you want.
+
+### Added
+
+- [REACT-SURVEY](https://github.com/WilliamSantiagoAlzate/survey_project/issues/14)
+  Include delete survey function.

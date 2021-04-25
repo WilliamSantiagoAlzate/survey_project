@@ -2,7 +2,8 @@
 import { 
   CREATE_SURVEY,
   UPDATE_SURVEY,
-  GET_SURVEY_BY_ID 
+  GET_SURVEY_BY_ID,
+  DELETE_SURVEY 
 } from '../consts';
 
 export const createSurvey = payload => ({
@@ -17,5 +18,10 @@ export const updateSurvey = payload => ({
 
 export const getSurveyById = payload => ({
   type: GET_SURVEY_BY_ID,
+  payload
+});
+
+export const deleteSurvey = payload => ({
+  type: DELETE_SURVEY,
   payload
 });

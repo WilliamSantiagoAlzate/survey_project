@@ -4,7 +4,8 @@ import { initialState } from '../initialState';
 import { 
 	CREATE_SURVEY,
 	UPDATE_SURVEY,
-	GET_SURVEY_BY_ID 
+	GET_SURVEY_BY_ID,
+	DELETE_SURVEY 
 } from '../consts';
 
 // Create reducers
@@ -35,6 +36,13 @@ const surveyReducer = (state = initialState, action) => {
 			return {
 				...state,
 				survey
+			}
+		case DELETE_SURVEY:
+			const { surveyId: deleteSurveyId  } = action.payload;
+			const newSurveys = surveys.filter(({ id }) => id !== deleteSurveyId);
+			return {
+				...state,
+				surveys: newSurveys
 			}
 		default:
 			return { ...state };

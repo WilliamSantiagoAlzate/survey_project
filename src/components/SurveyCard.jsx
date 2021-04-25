@@ -1,12 +1,15 @@
 // Import libraries
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+// Import actions
+import { deleteSurvey } from '../redux/actions/surveyActions';
 
-const SurveyCard = ({ survey }) => (
+const SurveyCard = ({ survey, deleteSurvey }) => (
   <article className="card">
     <section className="card-header">
       <div className="d-flex justify-content-between align-items-center">
         <h5>{survey.title}</h5>
-        <button type="button" className="btn btn-danger py-1 px-2">
+        <button type="button" className="btn btn-danger py-1 px-2" onClick={() => deleteSurvey(survey.id)}>
           <i className="fas fa-trash"></i>
         </button>
       </div>
@@ -35,4 +38,11 @@ const SurveyCard = ({ survey }) => (
   </article>
 );
 
-export default SurveyCard;
+// Map dispatch
+const mapDispatchToProps = dispatch => ({
+  deleteSurvey(surveyId) {
+    dispatch(deleteSurvey({ surveyId }))
+  },
+});
+  
+export default connect(null, mapDispatchToProps)(SurveyCard);
