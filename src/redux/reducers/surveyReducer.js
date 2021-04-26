@@ -5,8 +5,11 @@ import {
 	CREATE_SURVEY,
 	UPDATE_SURVEY,
 	GET_SURVEY_BY_ID,
-	DELETE_SURVEY 
+	DELETE_SURVEY,
+	SAVE_SURVEY_ANSWER 
 } from '../consts';
+// Import utils
+import { generateAnswerId } from '../../utils/idGenerator';
 
 // Create reducers
 const surveyReducer = (state = initialState, action) => {
@@ -43,6 +46,22 @@ const surveyReducer = (state = initialState, action) => {
 			return {
 				...state,
 				surveys: newSurveys
+			}
+		case SAVE_SURVEY_ANSWER:
+			const { surveyAnswer } = action.payload;
+			surveyIndex = surveys.findIndex(({ id }) => id === surveyAnswer.id);
+			surveyAnswer.questions.forEach((question, index) => {
+				surveys[surveyIndex].questions[index].answers.push({
+					id: generateAnswerId(surveys[surveyIndex].questions[index].answers),
+					answerId: Number(question.answerId),
+					answerType: question.answerType,
+					answerDescription: question.answerDescription,
+				})
+			});
+			surveys[surveyIndex].totalAnswers ++;
+			return {
+				...state,
+				surveys
 			}
 		default:
 			return { ...state };

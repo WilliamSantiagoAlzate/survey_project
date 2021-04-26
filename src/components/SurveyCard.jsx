@@ -17,9 +17,7 @@ const SurveyCard = ({ survey, deleteSurvey }) => (
         {`${survey.questions.length} Questions`}
       </span>
       <span className="badge rounded-pill bg-success">
-        {survey.answers.length > 0 && 
-          `${survey.answers[0].answersConsolidated.length} Answers`
-        }
+        {`${survey.totalAnswers} Answers`}
       </span>
     </section>
     <section className="card-body">
@@ -29,9 +27,9 @@ const SurveyCard = ({ survey, deleteSurvey }) => (
           Update
         </button>
       </Link>
-      <Link to="/">
+      <Link to={`/survey/${survey.id}`}>
         <button type="button" className="btn btn-primary me-2">
-          Answer survey
+          Survey
         </button>
       </Link>
     </section>

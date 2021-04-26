@@ -56,3 +56,12 @@ This version include the new delete survey feature, with this you can delete any
 
 - [REACT-SURVEY](https://github.com/WilliamSantiagoAlzate/survey_project/issues/14)
   Include delete survey function.
+
+## [5.0] - 2021-04-25 20:40
+
+This version include the new view survey feature, with this you can answer all surveys you want.
+
+### Added
+
+- [REACT-SURVEY](https://github.com/WilliamSantiagoAlzate/survey_project/issues/10)
+  Add survey form.

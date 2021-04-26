@@ -20,10 +20,11 @@ export const generateSelectAnswerId = (selectAnswer) => {
   return selectAnswer[lastIndex].id + 1;
 }
 
-export const generateAnswerId = (surveyId) => {
-
-}
-
-export const generateAnswerConsolidatedId = (surveyId, answerId) => {
-
+export const generateAnswerId = (answers) => {
+  const lastIndex = answers.length - 1;
+  if (lastIndex < 0) {
+    return 1;
+  } else {
+    return answers[lastIndex].id + 1;
+  }
 }

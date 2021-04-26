@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import SurveyList from './views/SurveyList';
 import CreateSurvey from './views/CreateSurvey';
 import UpdateSurvey from './views/UpdateSurvey';
+import Survey from './views/Survey';
 // Import components
 import Header from './components/Header';
 // Import style
@@ -19,6 +20,7 @@ const App = () => {
               <Route exact path="/" component={SurveyList}/>
               <Route exact path="/create" component={CreateSurvey}/>
               <Route exact path="/update/:id" component={UpdateSurvey}/>
+              <Route exact path="/survey/:id" component={Survey}/>
             </Switch>
         </main>
       </BrowserRouter>

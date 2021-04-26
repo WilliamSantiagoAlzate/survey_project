@@ -3,15 +3,15 @@ import { useState, useEffect, useRef } from 'react'
 import { connect } from 'react-redux';
 import { Formik } from 'formik';
 // Import components
-import SurveyForm from '../components/SurveyForm';
+import SurveyAnswer from '../components/SurveyAnswer';
 // Import actions
-import { updateSurvey, getSurveyById } from '../redux/actions/surveyActions';
+import { saveSurveyAnswer, getSurveyById } from '../redux/actions/surveyActions';
 
-const UpdateSurvey = ({
+const Survey = ({
   match,
   history, 
   survey, 
-  updateSurvey, 
+  saveSurveyAnswer, 
   getSurveyById 
 }) => {
   // State
@@ -31,7 +31,12 @@ const UpdateSurvey = ({
   // Set survey data
   useEffect(() => {
     if (survey.id) {
-      setInitialValues(survey);
+      setInitialValues({questions: survey.questions.map(question => ({
+        ...question,
+        answerId: 0,
+        answerType: question.answerType,
+        answerDescription: '',
+      }))});
       setIsLoading(false);
     }
   }, [survey]);
@@ -39,7 +44,7 @@ const UpdateSurvey = ({
   // Submit data
   const submit = (values) => {
     console.log(values);
-    updateSurvey(values);
+    saveSurveyAnswer({ ...values, id: survey.id });
     setShowAlert(true);
     alertRef.current.scrollIntoView({ behavior: "smooth" });
     setTimeout(() => {
@@ -50,22 +55,25 @@ const UpdateSurvey = ({
 
   return (
     <section className="row mb-4">
-      <h1 className="text-center mt-3 col-12">Update survey</h1>
       {isLoading ? 
         <div className="spinner-border text-primary" role="status"></div> :
-        <Formik
-          initialValues={initialValues}
-          onSubmit={submit}
-          rese
-        >
-          {({ values, handleChange }) => (
-            <SurveyForm values={values} handleChange={handleChange} />
-          )}
-        </Formik>
+        <>
+          <h1 className="text-center mt-3 col-12">{survey.title}</h1>
+          <p>{survey.description}</p>
+          <Formik
+            initialValues={initialValues}
+            onSubmit={submit}
+            rese
+          >
+            {({ values, handleChange }) => (
+              <SurveyAnswer questions={values.questions} handleChange={handleChange} />
+            )}
+          </Formik>
+        </>
       }
       {showAlert &&
         <article className="alert alert-success w-50 mx-auto mt-2" role="alert" ref={alertRef}>
-          <p className="mb-0">Survey updated successfully!</p>
+          <p className="mb-0">Survey submitted successfully!</p>
         </article>
       }
     </section>
@@ -74,8 +82,8 @@ const UpdateSurvey = ({
 
 // Map dispatch
 const mapDispatchToProps = dispatch => ({
-  updateSurvey(surveyData) {
-    dispatch(updateSurvey({ surveyData }))
+  saveSurveyAnswer(surveyAnswer) {
+    dispatch(saveSurveyAnswer({ surveyAnswer }))
   },
   getSurveyById(surveyId) {
     dispatch(getSurveyById({ surveyId }))
@@ -87,4 +95,4 @@ const mapStateToProps = state => ({
   survey: state.surveyReducer.survey
 });
   
-export default connect(mapStateToProps, mapDispatchToProps)(UpdateSurvey);
+export default connect(mapStateToProps, mapDispatchToProps)(Survey);
