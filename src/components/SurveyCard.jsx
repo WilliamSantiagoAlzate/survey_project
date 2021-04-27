@@ -32,11 +32,13 @@ const SurveyCard = ({ survey, deleteSurvey }) => (
           Survey
         </button>
       </Link>
-      <Link to={`/answers/${survey.id}`}>
-        <button type="button" className="btn btn-primary me-2">
-          Answers
-        </button>
-      </Link>
+      {survey.totalAnswers > 0 &&
+        <Link to={`/answers/${survey.id}`}>
+          <button type="button" className="btn btn-primary me-2">
+            Answers
+          </button>
+        </Link>
+      }
     </section>
   </article>
 );

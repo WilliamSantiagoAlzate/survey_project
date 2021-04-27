@@ -2,7 +2,7 @@
 
 This is a project for Mastery stage of Platzi Master, this project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and include a survey CRUD, a survey form and a answers statistics view.
 
-- Project url [React Survey](https://git.heroku.com/react-survey.git)
+- Project url [React Survey](https://react-survey-platzi-master.herokuapp.com/)
 
 ## Libraries used
 
