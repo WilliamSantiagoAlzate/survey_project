@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import { connect } from 'react-redux';
 import { Formik } from 'formik';
 // Import components
-import SurveyAnswer from '../components/SurveyAnswer';
+import SurveyAnswerForm from '../components/SurveyAnswerForm';
 // Import actions
 import { saveSurveyAnswer, getSurveyById } from '../redux/actions/surveyActions';
 
@@ -66,7 +66,7 @@ const Survey = ({
             rese
           >
             {({ values, handleChange }) => (
-              <SurveyAnswer questions={values.questions} handleChange={handleChange} />
+              <SurveyAnswerForm questions={values.questions} handleChange={handleChange} />
             )}
           </Formik>
         </>

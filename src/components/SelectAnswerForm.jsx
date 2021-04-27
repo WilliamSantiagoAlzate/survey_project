@@ -2,7 +2,7 @@ import { Field } from 'formik';
 // Import utils
 import { generateSelectAnswerId } from '../utils/idGenerator';
 
-const QuestionsForm = ({ 
+const SelectAnswerForm = ({ 
   selectAnswer, 
   handleChange,
   push,
@@ -54,4 +54,4 @@ const QuestionsForm = ({
 );
 
   
-export default QuestionsForm;
+export default SelectAnswerForm;

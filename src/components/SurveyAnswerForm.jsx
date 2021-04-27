@@ -1,7 +1,7 @@
 // Import libraries
 import { Field, Form, FieldArray } from 'formik';
 
-const SurveyForm = ({ questions, handleChange }) => (
+const SurveyAnswerForm = ({ questions, handleChange }) => (
   <Form className="col-md-8 offset-md-2">
 
     <FieldArray name="questions">
@@ -50,4 +50,4 @@ const SurveyForm = ({ questions, handleChange }) => (
   </Form>
 );
   
-export default SurveyForm;
+export default SurveyAnswerForm;

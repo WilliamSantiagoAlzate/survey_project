@@ -65,3 +65,12 @@ This version include the new view survey feature, with this you can answer all s
 
 - [REACT-SURVEY](https://github.com/WilliamSantiagoAlzate/survey_project/issues/10)
   Add survey form.
+
+## [6.0] - 2021-04-26 19:55
+
+This is the last version, this include the new view survey answers statistics, with this you can see all survey statistics.
+
+### Added
+
+- [REACT-SURVEY](https://github.com/WilliamSantiagoAlzate/survey_project/issues/15)
+  Show answers statistics.

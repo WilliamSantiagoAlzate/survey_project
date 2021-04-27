@@ -5,6 +5,7 @@ import SurveyList from './views/SurveyList';
 import CreateSurvey from './views/CreateSurvey';
 import UpdateSurvey from './views/UpdateSurvey';
 import Survey from './views/Survey';
+import SurveyAnswers from './views/SurveyAnswers';
 // Import components
 import Header from './components/Header';
 // Import style
@@ -21,6 +22,7 @@ const App = () => {
               <Route exact path="/create" component={CreateSurvey}/>
               <Route exact path="/update/:id" component={UpdateSurvey}/>
               <Route exact path="/survey/:id" component={Survey}/>
+              <Route exact path="/answers/:id" component={SurveyAnswers}/>
             </Switch>
         </main>
       </BrowserRouter>
