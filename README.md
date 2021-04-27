@@ -1,6 +1,17 @@
-# Getting Started with Create React App
+# React survey
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a project for Mastery stage of Platzi Master, this project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and include a survey CRUD, a survey form and a answers statistics view.
+
+- Project url [React Survey](https://git.heroku.com/react-survey.git)
+
+## Libraries used
+
+- React [v17.0.2](https://reactjs.org/)
+- Bootstrap [v5.0.0](https://getbootstrap.com/)
+- Formik [v2.2.6](https://formik.org/)
+- React router dom [v5.2.0](https://reacttraining.com/react-router/)
+- Redux [v4.0.5](https://redux.js.org/)
+- React redux [v7.2.3](https://react-redux.js.org/)
 
 ## Available Scripts
 
@@ -13,11 +24,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `yarn build`
 
