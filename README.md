@@ -48,6 +48,10 @@ Redux was added to create a global state.
 
 React redux was added to connect the react app with redux store.
 
+## Project requirements
+
+[React_project_William_Santiago_1.pdf](https://drive.google.com/file/d/1Qwz_8Q4asW5dmPdUlfbHyire_5S9HHiS/view?usp=sharing)
+
 ## Academic coach
 
 Joshua Pedraza
@@ -77,3 +81,4 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
