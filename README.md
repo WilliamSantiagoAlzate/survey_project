@@ -6,6 +6,10 @@ This is a project for Mastery stage of Platzi Master and in this website you can
 
 [React Survey](https://react-survey-platzi-master.herokuapp.com/)
 
+## Preview Image
+
+![image](https://user-images.githubusercontent.com/55466321/117750133-85285f80-b1d8-11eb-8226-f14c177324e6.png)
+
 ## Libraries used
 
 ### React
