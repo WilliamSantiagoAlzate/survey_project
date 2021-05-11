@@ -1,17 +1,56 @@
 # React survey
 
-This is a project for Mastery stage of Platzi Master, this project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and include a survey CRUD, a survey form and a answers statistics view.
+This is a project for Mastery stage of Platzi Master and in this website you can create, update and delete surveys, also you can answer the survey and see the statistics. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-- Project url [React Survey](https://react-survey-platzi-master.herokuapp.com/)
+## Live demo
+
+[React Survey](https://react-survey-platzi-master.herokuapp.com/)
 
 ## Libraries used
 
-- React [v17.0.2](https://reactjs.org/)
-- Bootstrap [v5.0.0](https://getbootstrap.com/)
-- Formik [v2.2.6](https://formik.org/)
-- React router dom [v5.2.0](https://reacttraining.com/react-router/)
-- Redux [v4.0.5](https://redux.js.org/)
-- React redux [v7.2.3](https://react-redux.js.org/)
+### React
+
+[v17.0.2](https://reactjs.org/)
+
+React was used to add individual components.
+
+### Bootstrap
+
+[v5.0.0](https://getbootstrap.com/)
+
+Bootstrap was used to add styles to the project.
+
+### Formik
+
+[v2.2.6](https://formik.org/)
+
+Formik was used to add dynamic forms.
+
+### React router dom
+
+[v5.2.0](https://reacttraining.com/react-router/)
+
+React router dom was added to create a single page application.
+
+### Redux
+
+[v4.0.5](https://redux.js.org/)
+
+Redux was added to create a global state.
+
+### React redux
+
+[v7.2.3](https://react-redux.js.org/)
+
+React redux was added to connect the react app with redux store.
+
+## Academic coach
+
+Joshua Pedraza
+
+## Author
+
+William Santiago Alzate Barriga - William Santiago Alzate [C7] - Frontend
 
 ## Available Scripts
 
@@ -34,43 +73,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
